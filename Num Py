@@ -1,0 +1,113 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN/mDMNNUiKk7wKBtkERQkE",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Num%20Py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B6dWwFOOCBbd",
+        "outputId": "2d79f240-6eee-4fb8-fe75-8d70b276fd56"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "orignal array\n",
+            "[(b'Ram', 8, 190.) (b'Abhinav', 7, 155.) (b'Prince', 9, 160.)]\n",
+            "sort by height\n",
+            "[(b'Abhinav', 7, 155.) (b'Prince', 9, 160.) (b'Ram', 8, 190.)]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "a= [('name','S15'),('class',int),('height', float)]\n",
+        "student_details= [('Ram', 8, 190),('Abhinav', 7, 155),('Prince', 9, 160)]\n",
+        "student= np.array(student_details, dtype=a)\n",
+        "print(\"orignal array\")\n",
+        "print(student)\n",
+        "print(\"sort by height\")\n",
+        "sot= np.sort(student, order=\"height\")\n",
+        "print(sot)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "# Define the data type for the structured array\n",
+        "dtype = [('name', 'U15'), ('class', int), ('height', float)]\n",
+        "\n",
+        "# Define the student details\n",
+        "student_details = [\n",
+        "    ('Ram', 8, 190.0),\n",
+        "    ('Abhinav', 7, 155.0),\n",
+        "    ('Prince', 9, 160.0)\n",
+        "]\n",
+        "\n",
+        "# Create a structured NumPy array\n",
+        "students = np.array(student_details, dtype=dtype)\n",
+        "\n",
+        "print(\"Original array:\")\n",
+        "print(students)\n",
+        "\n",
+        "# Sort the array by the 'height' field\n",
+        "sorted_students = np.sort(students, order='height')\n",
+        "\n",
+        "print(\"\\nSorted by height:\")\n",
+        "print(sorted_students)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rrM7IhL9D2q5",
+        "outputId": "52c3832a-c4ed-40f2-ac71-33d68c3a05cc"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original array:\n",
+            "[('Ram', 8, 190.) ('Abhinav', 7, 155.) ('Prince', 9, 160.)]\n",
+            "\n",
+            "Sorted by height:\n",
+            "[('Abhinav', 7, 155.) ('Prince', 9, 160.) ('Ram', 8, 190.)]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

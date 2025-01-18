@@ -1,0 +1,64 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMseAVIgcA4j1U5NsuRlEBV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Manipulating%20using%20Pandas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S9OYHsSNde5l",
+        "outputId": "399cf1fe-0f94-4be8-f9fc-8971619f25b0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "  Employs  Psitiom  Sallary\n",
+            "0     Adi  Founder  $5000/m\n",
+            "1  Gaurav      CEO   $700/m\n",
+            "2  Ujwall  Manager   $500/m\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas\n",
+        "\n",
+        "mydataset= {\n",
+        "    'Employs': [\"Adi\", \"Gaurav\", \"Ujwall\"],\n",
+        "    'Psitiom': [\"Founder\", \"CEO\", \"Manager\"],\n",
+        "    'Sallary': [\"$5000/m\", \"$700/m\", \"$500/m\"]\n",
+        "}\n",
+        "myvar= pandas.DataFrame(mydataset)\n",
+        "print(myvar)"
+      ]
+    }
+  ]
+}

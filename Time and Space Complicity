@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPHWOxCADS0WB1ej1HQDcq+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Time%20and%20Space%20Complicity\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y_F-tWBpKVjV",
+        "outputId": "ca0711f5-d701-44c2-eed9-df6097055e98"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def abc(n):\n",
+        "  return n*(n+1)/2\n",
+        "print(abc(4))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(n):\n",
+        "  sum= 0\n",
+        "  for i in range(1,n+1):\n",
+        "    sum= sum+i\n",
+        "  return sum\n",
+        "print(abc(4))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OjBwLFgQKZW7",
+        "outputId": "19752fe3-450b-43cc-a120-8ced73256bd5"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(n):\n",
+        "  sum= 0\n",
+        "  for i in range(1,n+1):\n",
+        "    for j in range(1,i+1):\n",
+        "      sum= sum+i\n",
+        "  return sum\n",
+        "print(abc(4))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s5kWUZt2LRYr",
+        "outputId": "b7f808b8-6e37-44d6-b4cc-eb1aee747412"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

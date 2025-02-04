@@ -1,0 +1,62 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNvvlf26di88ZNNxayZDL9B",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Reccurence%20Relations\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wEJa2H1_Robz",
+        "outputId": "feef547d-7755-4615-d3a8-ed67fcb09b18"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "672"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "def sum(a):\n",
+        "  sum= 1\n",
+        "  for i in a:\n",
+        "    sum= sum*i\n",
+        "  return sum\n",
+        "a= [6,2,7,1,8]\n",
+        "sum(a)"
+      ]
+    }
+  ]
+}

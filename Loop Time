@@ -1,0 +1,226 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMEJzm+HkpzVUunqCQEWkBW",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Loop%20Time\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xOAg3KZFO-6_",
+        "outputId": "4578fbd3-4129-4984-e64d-373e5fd52cad"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "First loop\n",
+            "None\n"
+          ]
+        }
+      ],
+      "source": [
+        "def myfunction(n):\n",
+        "  for i in range(0, n+1):\n",
+        "    print(\"First loop\")\n",
+        "print(myfunction(10))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def myfunction(n):\n",
+        "  j= 1\n",
+        "  while(j<=n+1):\n",
+        "    print(\"Second Loop\")\n",
+        "    j=j*2\n",
+        "print(myfunction(10))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ErQ5uJP6QJ42",
+        "outputId": "26f4331b-6d04-4862-8f54-38f08d9d579d"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Second Loop\n",
+            "Second Loop\n",
+            "Second Loop\n",
+            "Second Loop\n",
+            "None\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def myfunction(n):\n",
+        "  for i in range(0,100):\n",
+        "    print(\"Third Loop\")\n",
+        "print(myfunction(10))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "iwhFlOY1Qptd",
+        "outputId": "0282d915-966a-4726-db14-5272bce83f7b"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "Third Loop\n",
+            "None\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

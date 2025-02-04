@@ -1,0 +1,113 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN8gJZ+ZAlNqTF2QThy78oj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Space%20Complicity\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wp6Pssy4NEZ7",
+        "outputId": "8b7b188b-cee9-438e-aaf1-1c4b1960d169"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "55.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def sum(n):\n",
+        "  return n*(n+1)/2\n",
+        "print(sum(10))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum(a):\n",
+        "  sum= 0\n",
+        "  for i in a:\n",
+        "    sum= sum+i\n",
+        "  return sum\n",
+        "a= [8,3,5,9,2]\n",
+        "sum(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aTt_QZceNXqv",
+        "outputId": "cc99c37d-5f79-4526-bc7a-f5c834fa26e2"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "27"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum(n):\n",
+        "  if n <= 0:\n",
+        "    return n+sum(n-1)\n",
+        "print(sum(10))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NW8944wHN0Vu",
+        "outputId": "09466bdf-59a6-4e5d-9f14-eb04f888a193"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "None\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

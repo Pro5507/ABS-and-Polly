@@ -1,0 +1,174 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOhijGzvBUyY0j+uUhc/2y4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Maths%20Magic\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JFwAgE0tQeLF",
+        "outputId": "244a5c5f-3772-4d7e-c9c0-9bfc741d794c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number407\n",
+            "Armstrong number\n"
+          ]
+        }
+      ],
+      "source": [
+        "n= int(input('Enter a number'))\n",
+        "digit= len(str(n))\n",
+        "result= 0\n",
+        "temp= n\n",
+        "while temp>0:\n",
+        "  digit= temp%10\n",
+        "  result= result+(digit*digit*digit)\n",
+        "  temp= temp//10\n",
+        "if n==result:\n",
+        "  print(\"Armstrong number\")\n",
+        "else:\n",
+        "  print(\"It's not an armstrong number\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fact(n):\n",
+        "  print(n)\n",
+        "  for i in range(1, n+1):\n",
+        "    if n%i==0:\n",
+        "      print(i)\n",
+        "n= int(input('Enter a number'))\n",
+        "fact(n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "waVtAqM8R10X",
+        "outputId": "1dfe57c3-fb9f-4a1a-b1a1-8271049b8b92"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number28\n",
+            "28\n",
+            "1\n",
+            "2\n",
+            "4\n",
+            "7\n",
+            "14\n",
+            "28\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def rti(n):\n",
+        "  roman= {\"M\":1000, \"D\":500, \"C\":100, \"L\":50, \"X\":10, \"V\":5, \"I\":1}\n",
+        "  result= 0\n",
+        "  for i in range(0, len(n)-1):\n",
+        "    if roman[n[i]]<roman[n[i+1]]:\n",
+        "      result= result-roman[n[i]]\n",
+        "    else:\n",
+        "      result= result+roman[n[i]]\n",
+        "  result += roman[n[-1]]  # Add the last numeral\n",
+        "  return result\n",
+        "roman= input(\"Enter a roman \")\n",
+        "print(rti(roman))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hF6cC8_vSk4H",
+        "outputId": "eb3089b2-ac72-4e9c-ee69-142927109546"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a roman LIV\n",
+            "54\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def rti(n):\n",
+        "    roman_values = {\"M\": 1000, \"D\": 500, \"C\": 100, \"L\": 50, \"X\": 10, \"V\": 5, \"I\": 1}\n",
+        "    result = 0\n",
+        "\n",
+        "    for i in range(len(n) - 1):\n",
+        "        if roman_values[n[i]] < roman_values[n[i + 1]]:\n",
+        "            result -= roman_values[n[i]]\n",
+        "        else:\n",
+        "            result += roman_values[n[i]]\n",
+        "\n",
+        "    result += roman_values[n[-1]]  # Add the last numeral\n",
+        "    return result\n",
+        "\n",
+        "roman = input(\"Enter a Roman numeral: \")\n",
+        "print(rti(roman))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xqK00ZzUV455",
+        "outputId": "8e8e8000-2b98-4f20-f9b7-3390dd1fbf5c"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a Roman numeral: LIV\n",
+            "54\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

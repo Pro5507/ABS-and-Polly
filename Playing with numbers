@@ -1,0 +1,95 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMOnVQOujlqz/ldR1A1tkFj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Playing%20with%20numbers\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EXdti5_gP6rH",
+        "outputId": "421cf5a5-d865-47ea-da11-0fb18093db88"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number150\n",
+            "Its not a plindrome\n"
+          ]
+        }
+      ],
+      "source": [
+        "n= int(input(\"Enter a number\"))\n",
+        "t= n\n",
+        "result= 0\n",
+        "while n>0:\n",
+        "  digit= n%10\n",
+        "  result= result*10+digit\n",
+        "  n= n//10\n",
+        "if t==result:\n",
+        "  print(\"its a palindrome\")\n",
+        "else:\n",
+        "  print(\"Its not a plindrome\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l= int(input(\"Enter a number\"))\n",
+        "s= int(input(\"Enter a small number\"))\n",
+        "while (s):\n",
+        "  a= s\n",
+        "  s= l%s\n",
+        "  l= a\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ah-WSaBxQ6P1",
+        "outputId": "19ed465e-9102-49c8-855a-6eed6faa9467"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number50\n",
+            "Enter a small number25\n",
+            "25\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMCWCGw3ZMYSEY1aFC8/Y4S",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Maths%20Magic%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "73D2A7LUT1Eo",
+        "outputId": "d478a0cc-66dc-4b3e-f6ea-532a25b4993e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number17\n",
+            "It is a Prime number\n",
+            "It is a Prime number\n",
+            "It is a Prime number\n"
+          ]
+        }
+      ],
+      "source": [
+        "from math import sqrt\n",
+        "n= int(input(\"Enter a number \"))\n",
+        "if n>1:\n",
+        "  for i in range(2, int(sqrt(n))+1):\n",
+        "    if n%i==0:\n",
+        "      print(\"It's not a prime number\")\n",
+        "    else:\n",
+        "      print(\"It is a Prime number\")\n",
+        "else:\n",
+        "  print(\"It's not a prime number\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def prime(n):\n",
+        "  p= [True for i in range(n+1)]\n",
+        "  current= 2\n",
+        "  while current*current<= n:\n",
+        "    if p[current]==True:\n",
+        "      for i in range(current**2, n+1, current):\n",
+        "        p[i]=False\n",
+        "    current= current+1\n",
+        "  p[0]= False\n",
+        "  p[1]= False\n",
+        "  for j in range(n+1):\n",
+        "    if p[j]:\n",
+        "      print(p)\n",
+        "k= int(input(\"Enter a number\"))\n",
+        "prime(n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-VOcmvOnUotf",
+        "outputId": "7feae60b-ec77-4a1d-9a34-449b2dfbb1ac"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number5\n",
+            "[False, False, True, True, False, True]\n",
+            "[False, False, True, True, False, True]\n",
+            "[False, False, True, True, False, True]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

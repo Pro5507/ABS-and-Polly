@@ -1,0 +1,85 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMr+7g+A4Jtlsq22mhQcP/+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/I%20Love%20You%203000\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cahbspKUW7xR",
+        "outputId": "00c3ca15-ea55-4463-c9cb-baaf521a5d2a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "11\n",
+            "101\n",
+            "131\n",
+            "151\n",
+            "181\n",
+            "191\n",
+            "313\n",
+            "353\n",
+            "373\n",
+            "383\n",
+            "727\n",
+            "757\n",
+            "787\n",
+            "797\n",
+            "919\n",
+            "929\n"
+          ]
+        }
+      ],
+      "source": [
+        "a= 3000\n",
+        "for num in range(1,a+1):\n",
+        "  c= 0\n",
+        "  rev= 0\n",
+        "  temp= num\n",
+        "  for i in range(1,temp+1):\n",
+        "    if temp%i==0:\n",
+        "      c+=1\n",
+        "  if c==2:\n",
+        "    while temp>0:\n",
+        "      rev= rev*10+(temp%10)\n",
+        "      temp //=10\n",
+        "    if rev==num:\n",
+        "      print(num)\n"
+      ]
+    }
+  ]
+}

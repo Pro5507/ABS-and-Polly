@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPEnyzCQjI9J1S0zD6HXfVN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Bit%20manipulation\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ooH3cjjcMpUR",
+        "outputId": "54766be7-1161-4c84-8e44-e61895756d2f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "14\n",
+            "-5\n",
+            "14\n",
+            "20\n",
+            "5\n"
+          ]
+        }
+      ],
+      "source": [
+        "a= 10\n",
+        "b= 4\n",
+        "print(a & b)\n",
+        "print(a|b)\n",
+        "print(~b)\n",
+        "print(a^b)\n",
+        "print(a<<1)\n",
+        "print(a>>1)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(n):\n",
+        "  if(n^1==n+1):\n",
+        "    return True\n",
+        "  else:\n",
+        "    return False\n",
+        "number= int(input(\"Enter a number \"))\n",
+        "if abc(number):\n",
+        "  print(\"number is even\")\n",
+        "else:\n",
+        "  print(\"number is odd\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TDvgqF0iSRc6",
+        "outputId": "64adfebe-1a7f-4ff7-8bcb-d3a57b5212de"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number 9\n",
+            "number is odd\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(n):\n",
+        "  count=0\n",
+        "  while(n):\n",
+        "    count= count+1\n",
+        "    n>>=1\n",
+        "  return count\n",
+        "a= int(input(\"Enter a number: \"))\n",
+        "print(abc(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7xsoINXFTARR",
+        "outputId": "1f66a76b-505e-425e-ead2-32808579372c"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 2000\n",
+            "11\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

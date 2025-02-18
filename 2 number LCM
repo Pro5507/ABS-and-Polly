@@ -1,0 +1,63 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOBRALVT8iDJujF1CUFLC+V",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/2%20number%20LCM\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1= int(input(\"Enter 1st number \"))\n",
+        "n2= int(input(\"Enter 2nd number \"))\n",
+        "mn= int(input(\"The by what you have to find LCM \"))\n",
+        "while ln1 =>1\n",
+        "ln1= n1/mn\n",
+        "ln2= n2/mn\n",
+        "lcm= mn*(ln1+ln2)\n",
+        "print(lcm)"
+      ],
+      "metadata": {
+        "id": "SbL-M7cIViGd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1fe935d2-e733-4d7f-edcd-7817295c55cd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter 1st number 4\n",
+            "Enter 2nd number 8\n",
+            "The by what you have to find LCM 2\n",
+            "12.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

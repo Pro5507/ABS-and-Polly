@@ -1,0 +1,97 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO5C5n8HSFI+/O6gDmIx4HH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Bit%20Play1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mNQiKXcXVqEB",
+        "outputId": "01c5849f-28bf-46e5-82b8-6a2ece03b781"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number15\n",
+            "4 0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def abc(n):\n",
+        "  once= 0\n",
+        "  zeros= 0\n",
+        "  while n:\n",
+        "    if (n&1==1):\n",
+        "      once= once+1\n",
+        "    else:\n",
+        "      zeros= zeros+1\n",
+        "    n>>=1\n",
+        "  print(once,zeros)\n",
+        "n= int(input(\"Enter a number: \"))\n",
+        "abc(n)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(number, n):\n",
+        "  if number&(1<<(n-1)):\n",
+        "    print(\"set\")\n",
+        "  else:\n",
+        "    print(\"Not set\")\n",
+        "number= int(input(\"Enter a number: \"))\n",
+        "n= int(input(\"Enter a bit number: \"))\n",
+        "abc(number, n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4EVxdDuoXks7",
+        "outputId": "e614af14-afb3-4e3a-e6a5-ceff66d34f33"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 56\n",
+            "Enter a bit number: 5\n",
+            "set\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMImkSITSJ06aJPKwDBTz2V",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Bit%20play%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W3-7XGPPUI6v",
+        "outputId": "fe922872-b701-4b4f-9664-12c69893818f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter 1st number: 14\n",
+            "Enter 2nd number: 17\n",
+            "Number are not equal\n"
+          ]
+        }
+      ],
+      "source": [
+        "def abc(n1,n2):\n",
+        "  if ((n1^n2)!=0):\n",
+        "    print(\"Number are not equal\")\n",
+        "  else:\n",
+        "    print(\"Number are equal\")\n",
+        "n1= int(input(\"Enter 1st number: \"))\n",
+        "n2= int(input(\"Enter 2nd number: \"))\n",
+        "abc(n1,n2)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(a):\n",
+        "  result= 0\n",
+        "  for i in a:\n",
+        "    result= result^i\n",
+        "  return result\n",
+        "a= []\n",
+        "n= int(input(\"Enter a size: \"))\n",
+        "while (n):\n",
+        "  number= int(input(\"Enter a number: \"))\n",
+        "  a.append(number)\n",
+        "  n= n-1\n",
+        "print(abc(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h4DOK2ZYVS6M",
+        "outputId": "e3af989e-5882-4b1a-f7b4-b9566a62b7a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a size: 5\n",
+            "Enter a number: 2\n",
+            "Enter a number: 2\n",
+            "Enter a number: 4\n",
+            "Enter a number: 4\n",
+            "Enter a number: 7\n",
+            "7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def Odd(arr, size):\n",
+        "  xorof2= arr[0]\n",
+        "  x=0\n",
+        "  y=0\n",
+        "  SetBit=0\n",
+        "  for i in range(1,size):\n",
+        "    xorof2= xorof2^ arr[i]\n",
+        "  setbit= xorof2& ~(xorof2-1)\n",
+        "  for i in range(size):\n",
+        "    if(arr[i]&setbit):\n",
+        "      x= x^arr[i]\n",
+        "    else:\n",
+        "      y= y^arr[i]\n",
+        "  print(\"Odd elsements are\",x,\"&\",y)\n",
+        "arr= []\n",
+        "arr_size= int(input(\"Enter size of the array: \"))\n",
+        "for i in range(0, arr_size):\n",
+        "  z= int(input(\"Enter a number: \"))\n",
+        "  arr.append(z)\n",
+        "Odd(arr, arr_size)"
+      ],
+      "metadata": {
+        "id": "tyA27wl8Wpt7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d8e3461d-7acc-4c26-ac6b-196e235fc148"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter size of the array: 6\n",
+            "Enter a number: 4\n",
+            "Enter a number: 3\n",
+            "Enter a number: 6\n",
+            "Enter a number: 4\n",
+            "Enter a number: 2\n",
+            "Enter a number: 3\n",
+            "Odd elsements are 6 & 2\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

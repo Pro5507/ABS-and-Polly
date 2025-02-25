@@ -1,0 +1,177 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyObEiNylCJ9Pi1KNVfp6qNH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/2%20Digit%20Primes\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lgGZNVI1UtiQ",
+        "outputId": "5453b275-efa4-4918-d86b-468f4f65ecaa",
+        "collapsed": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11 \n",
+            "\n",
+            "13 \n",
+            "\n",
+            "17 \n",
+            "\n",
+            "19 \n",
+            "\n",
+            "23 \n",
+            "\n",
+            "29 \n",
+            "\n",
+            "31 \n",
+            "\n",
+            "37 \n",
+            "\n",
+            "41 \n",
+            "\n",
+            "43 \n",
+            "\n",
+            "47 \n",
+            "\n",
+            "53 \n",
+            "\n",
+            "59 \n",
+            "\n",
+            "61 \n",
+            "\n",
+            "67 \n",
+            "\n",
+            "71 \n",
+            "\n",
+            "73 \n",
+            "\n",
+            "79 \n",
+            "\n",
+            "83 \n",
+            "\n",
+            "89 \n",
+            "\n",
+            "97 \n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "def prime(n):\n",
+        "  if n<2:\n",
+        "    return False\n",
+        "  for i in range(2, int(n**0.5)+1):\n",
+        "   if n%i==0:\n",
+        "    return False\n",
+        "  return True\n",
+        "for a in range(10,100):\n",
+        "  if prime(a):\n",
+        "    print(a,\"\\n\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def prime(n):\n",
+        "  if n<2:\n",
+        "    return False\n",
+        "  for i in range(2,int(n**0.5)+1):\n",
+        "    if n%i==0:\n",
+        "      return False\n",
+        "  return True\n",
+        "for j in range(10,100):\n",
+        "  if prime(j):\n",
+        "    print(j,\"\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BBMuDc4UcYxD",
+        "outputId": "c67b4c3b-9ab5-4135-accb-a5d46b283ac6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11 \n",
+            "\n",
+            "13 \n",
+            "\n",
+            "17 \n",
+            "\n",
+            "19 \n",
+            "\n",
+            "23 \n",
+            "\n",
+            "29 \n",
+            "\n",
+            "31 \n",
+            "\n",
+            "37 \n",
+            "\n",
+            "41 \n",
+            "\n",
+            "43 \n",
+            "\n",
+            "47 \n",
+            "\n",
+            "53 \n",
+            "\n",
+            "59 \n",
+            "\n",
+            "61 \n",
+            "\n",
+            "67 \n",
+            "\n",
+            "71 \n",
+            "\n",
+            "73 \n",
+            "\n",
+            "79 \n",
+            "\n",
+            "83 \n",
+            "\n",
+            "89 \n",
+            "\n",
+            "97 \n",
+            "\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

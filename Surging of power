@@ -1,0 +1,139 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM3SGSuLG91kcIWXnEiTp5z",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Surging%20of%20power\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PJ5FVyCTaB8r",
+        "outputId": "c24b5102-accb-4d77-d574-0d279fd9f091"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 4\n",
+            "The number is power of 2\n"
+          ]
+        }
+      ],
+      "source": [
+        "def abc(number):\n",
+        "  if number==0:\n",
+        "    return 0\n",
+        "  if(number&(~(number-1)))==number:\n",
+        "    return 1\n",
+        "  return 0\n",
+        "number= int(input(\"Enter a number: \"))\n",
+        "if abc(number):\n",
+        "  print(\"The number is power of 2\")\n",
+        "else:\n",
+        "  print(\"The number is not a power of 2\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(n):\n",
+        "  count= 0\n",
+        "  if (n&(~(n&(n-1)))):\n",
+        "    while n>1:\n",
+        "      n>>=1\n",
+        "      count= count+1\n",
+        "    if count%2==0:\n",
+        "        return True\n",
+        "    else:\n",
+        "        return False\n",
+        "n= int(input(\"Enter a number: \"))\n",
+        "if abc(n):\n",
+        "  print(\"The number is power of 4\")\n",
+        "else:\n",
+        "  print(\"The number is not a power of 4\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VZUjUh6WbG2S",
+        "outputId": "c209f024-f5a3-4efb-efd0-b8cb00a65a56"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 64\n",
+            "The number is power of 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abc(x,y):\n",
+        "  result= 1\n",
+        "  while y>0:\n",
+        "    if y%2==0:\n",
+        "      x= x*x\n",
+        "      y>>=1\n",
+        "    else:\n",
+        "      result= result*x\n",
+        "      y=y-1\n",
+        "  return result\n",
+        "x= int(input(\"Enter a number: \"))\n",
+        "y= int(input(\"Enter a number: \"))\n",
+        "print(abc(x,y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LfL8aUrPdOQx",
+        "outputId": "25206a73-4d6f-43a5-ed23-f183fb6f6b7a"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 2\n",
+            "Enter a number: 3\n",
+            "8\n"
+          ]
+        }
+      ]
+    }
+  ]
+}

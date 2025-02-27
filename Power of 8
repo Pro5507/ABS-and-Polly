@@ -1,0 +1,55 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN3JezdqSBIBP8yBdsTs9kl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/Power%20of%208\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-w8HCFgLhKd2"
+      },
+      "outputs": [],
+      "source": [
+        "def abc(n):\n",
+        "  count= 0\n",
+        "  if (n&(~(n&(n-1)))):\n",
+        "    while n>1:\n",
+        "      n>>1\n",
+        "      count= count+1\n",
+        "    if count%2==0:\n",
+        "      return True\n",
+        "    else:\n",
+        "      return False\n",
+        "n= int(input(\"Enter a number: \"))\n",
+        "if abc(n):\n",
+        "  print(\"It is a power of 8\")\n",
+        "else:\n",
+        "  print(\"It is not a power of 8\")"
+      ]
+    }
+  ]
+}

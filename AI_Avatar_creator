@@ -1,0 +1,136 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNk50SxmUyEK3SxCHX7G+xC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/AI_Avatar_creator\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "M4Yf5V163xUQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 401
+        },
+        "outputId": "c910a5aa-ea3f-49f4-801e-10e765f7c716"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'streamlit'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_15660/2127643617.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mio\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mimport\u001b[0m \u001b[0mstreamlit\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mst\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0mhuggingface_hub\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mInferenceClient\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mconfig\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'streamlit'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ],
+      "source": [
+        "import io\n",
+        "import streamlit as st\n",
+        "from huggingface_hub import InferenceClient\n",
+        "import config\n",
+        "\n",
+        "st.set_page_config(page_title=\"AI Avatar Creator\", page_icon=\"🎨\", layout=\"centered\")\n",
+        "\n",
+        "OPTIONS = {\n",
+        "    \"avatar type\": [\"boy hero\", \"girl hero\", \"wizard\", \"robot explorer\", \"space warrior\", \"animal adventurer\"],\n",
+        "    \"hairstyle\": [\"short spiky hair\", \"curly hair\", \"long straight hair\", \"ponytail\", \"glowing hair\", \"helmet\"],\n",
+        "    \"outfit\": [\"superhero suit\", \"magical robe\", \"space armor\", \"casual hoodie\", \"battle costume\", \"royal outfit\"],\n",
+        "    \"expression\": [\"happy\", \"confident\", \"excited\", \"brave\", \"mysterious\", \"playful\"],\n",
+        "    \"background\": [\"forest\", \"space station\", \"magic castle\", \"city skyline\", \"rainbow world\", \"cloud kingdom\"],\n",
+        "    \"art style\": [\"cartoon style\", \"anime style\", \"3D game style\", \"fantasy illustration\", \"comic style\"],\n",
+        "}\n",
+        "client = InferenceClient(api_key=config.HF_API_KEY)\n",
+        "st.session_state.setdefault(\"generated_image\", None)\n",
+        "st.title(\"🎨 AI Avatar Creator\")\n",
+        "st.write(\"Create your own avatar with AI!\")\n",
+        "st.markdown(\"Choose your avatar details or write your own custom prompt, then click **Generate Avatar**.\")\n",
+        "st.subheader(\"🛠️ Create Your Avatar\")\n",
+        "mode = st.selectbox(\"Choose prompt mode\", [\"Use Avatar Builder\", \"Write Custom Prompt\"])\n",
+        "\n",
+        "if mode == \"Use Avatar Builder\":\n",
+        "    values = {k: st.selectbox(f\"Choose {k}\", v) for k, v in OPTIONS.items()}\n",
+        "    extra = st.text_input(\"Add one extra detail (optional)\", placeholder=\"Example: glowing blue eyes\").strip()\n",
+        "    prompt = (\n",
+        "        f\"A kid-friendly {values['avatar type']}, \"\n",
+        "        f\"with {values['hairstyle']}, \"\n",
+        "        f\"wearing {values['outfit']}, \"\n",
+        "        f\"with a {values['expression']} expression, \"\n",
+        "        f\"in a {values['background']} background, \"\n",
+        "        f\"{values['art style']}, colorful, highly detailed, digital art\"\n",
+        "    )\n",
+        "    final_prompt = f\"{prompt}, {extra}\" if extra else prompt\n",
+        "else:\n",
+        "    final_prompt = st.text_area(\n",
+        "        \"Write your own prompt\",\n",
+        "        placeholder=\"Example: A brave young wizard with silver hair...\",\n",
+        "        height=150,\n",
+        "    ).strip()\n",
+        "with st.expander(\"👀 See the AI prompt\"):\n",
+        "    st.write(final_prompt or \"Your prompt will appear here.\")\n",
+        "if st.button(\"✨ Generate Avatar\"):\n",
+        "    if not config.HF_API_KEY:\n",
+        "        st.error(\"Hugging Face API key is missing. Please add it to your .env file.\")\n",
+        "    elif not final_prompt:\n",
+        "        st.warning(\"Please create or enter a prompt first.\")\n",
+        "    else:\n",
+        "        with st.spinner(\"Creating your avatar...\"):\n",
+        "            try:\n",
+        "                st.session_state.generated_image = client.text_to_image(\n",
+        "                    prompt=final_prompt,\n",
+        "                    model=config.HF_IMAGE_MODEL,\n",
+        "                )\n",
+        "                st.success(\"Your avatar is ready!\")\n",
+        "            except Exception as e:\n",
+        "                st.error(f\"Something went wrong: {e}\")\n",
+        "if st.session_state.generated_image:\n",
+        "    st.image(st.session_state.generated_image, caption=\"Your AI Avatar\", use_container_width=True)\n",
+        "    buffer = io.BytesIO()\n",
+        "    st.session_state.generated_image.save(buffer, format=\"PNG\")\n",
+        "    st.download_button(\n",
+        "        \"📥 Download Avatar\",\n",
+        "        data=buffer.getvalue(),\n",
+        "        file_name=\"ai_avatar.png\",\n",
+        "        mime=\"image/png\",\n",
+        "    )\n"
+      ]
+    }
+  ]
+}

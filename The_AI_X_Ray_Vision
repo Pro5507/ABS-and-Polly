@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOwzjdJs3VGrBF/feQFEsIG",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pro5507/ABS-and-Polly/blob/main/The_AI_X_Ray_Vision\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "aoAbfKtzu9AZ"
+      },
+      "outputs": [],
+      "source": [
+        "import base64, io, json\n",
+        "from io import BytesIO\n",
+        "import streamlit as st\n",
+        "from PIL import Image, ImageDraw, ImageFont\n",
+        "from groq import Groq\n",
+        "import config\n",
+        "\n",
+        "st.set_page_config(page_title=\"The AI X-Ray Vision\", page_icon=\"🧪\", layout=\"centered\")\n",
+        "client = Groq(api_key=config.GROQ_API_KEY)\n",
+        "st.session_state.setdefault(\"xray_outputs\", [])\n",
+        "\n",
+        "PROMPT = \"\"\"Analyze this image and return ONLY valid JSON.\n",
+        "Identify all clearly visible important objects in the image.\n",
+        "For each object, return: name, short_lable, full_metadata, confidence, box\n",
+        "The \"box\" must use pencentage 0 to 100 with x, y, w, h.\n",
+        "Rules:\n",
+        "  - Include all clearlyvisible important objects in the image.\n",
+        "  - Do not guess hidden or unclear objects\n",
+        "  - If unsure, skip the object\n",
+        "  - Keep labels short and kid-friendly\n",
+        "  - Confidence must be of: high, medium, low\n",
+        "  - Never identify a real person by name\n",
+        "  - Return JSON only\n",
+        "Format:\n",
+        "{\"scene_title\":\"title\",\"object\":\n",
+        "[{\"name\":\"...\",\"short_label\":\"...\",\"fun_metadata\":\"...\",\"confidence\":\"high\",\"box\"}]}\"\"\""
+      ]
+    }
+  ]
+}
